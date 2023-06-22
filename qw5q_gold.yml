@@ -403,9 +403,13 @@ native_gates:
 characterization:
     single_qubit:
         0:
+            bare_resonator_frequency: 7_229_375_000
             readout_frequency: 7_212_362_551
             drive_frequency: 5_045_070_000
-            # anharmonicity: 291_451_184
+            anharmonicity: 291_451_184
+            Ec: 270_000_000
+            Ej: 11_400_000_000
+            g: 35_420_472   
             T1: 5_857
             T2: 0
             state0_voltage: 0.0
@@ -414,9 +418,13 @@ characterization:
             mean_exc_states: (0.0+0.0j)
             sweetspot: -0.0884
         1:
+            bare_resonator_frequency: 7_450_311_610
             readout_frequency: 7_453_149_599
             drive_frequency: 4_852_280_321
-            # anharmonicity: 291_965_010
+            anharmonicity: 291_965_010
+            Ec: 270_000_000
+            Ej: 11_400_000_000
+            g: 30_733_394
             T1: 1_253
             T2: 0
             state0_voltage: 0.0
@@ -425,9 +433,13 @@ characterization:
             mean_exc_states: (0.0+0.0j)
             sweetspot: 0.5592
         2:
+            bare_resonator_frequency: 7_652_238_398
             readout_frequency: 7_655_110_446
             drive_frequency: 5_794_176_000
-            # anharmonicity: 275_392_460
+            anharmonicity: 275_392_460
+            Ec: 270_000_000
+            Ej: 16_000_000_000
+            g: 30_075_920
             T1: 4_563
             T2: 0
             state0_voltage: 0.0
@@ -436,9 +448,13 @@ characterization:
             mean_exc_states: (0.0+0.0j)
             sweetspot: 0.1967
         3:
+            bare_resonator_frequency: 7_800_788_520
             readout_frequency: 7_803_377_426
             drive_frequency: 6_760_050_000
-            # anharmonicity: 261_797_410
+            anharmonicity: 261_797_410
+            Ec: 270_000_000
+            Ej: 21_200_000_000
+            g: 24_411_598
             T1: 4_232
             T2: 0
             state0_voltage: 0.0
@@ -447,9 +463,13 @@ characterization:
             mean_exc_states: (0.0+0.0j)
             sweetspot: 0.7557
         4:
+            bare_resonator_frequency: 8_056_279_456
             readout_frequency: 8_058_739_833
             drive_frequency: 6_585_145_857
-            # anharmonicity: 253_106_666
+            anharmonicity: 253_106_666
+            Ec: 270_000_000
+            Ej: 21_200_000_000
+            g: 13_241_462                      
             T1: 492
             T2: 0
             state0_voltage: 0.0
@@ -458,9 +478,13 @@ characterization:
             mean_exc_states: (0.0+0.0j)
             sweetspot: 0.4555
         5:
+            bare_resonator_frequency: 7_117_016_520
             readout_frequency: 7_118_627_416
             drive_frequency: 4_700_000_000
-            # anharmonicity: 300_000_000
+            anharmonicity: 300_000_000
+            Ec: 270_000_000
+            Ej: 11_400_000_000
+            g: 0
             T1: 0
             T2: 0
             state0_voltage: 0.0
