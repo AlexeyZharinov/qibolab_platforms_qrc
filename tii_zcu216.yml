@@ -9,12 +9,12 @@ native_gates:
         D1:
             RX: {duration: 40, amplitude: 0.535, frequency: 4940357493, shape: Gaussian(2),
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.105, frequency: 6952316555, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.16, frequency: 6952316555, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         D2:
             RX: {duration: 40, amplitude: 0.551, frequency: 5_755_933_959, shape: Gaussian(2),
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.14, frequency: 7110360000, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.13, frequency: 7110360000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         D3:
             RX: {duration: 40, amplitude: 0.696, frequency: 6_075_205_000, shape: Gaussian(2),
@@ -40,13 +40,13 @@ characterization:
         D1:
             bare_resonator_frequency: 6949916555
             readout_frequency: 6951700000
-            drive_frequency: 4934680654
+            drive_frequency: 4934770660
             anharmonicity: 0.0
             Ec: 0
             Ej: 0
             g: 0
             assigment_fidelity: 0.0
-            sweetspot: 0.063
+            sweetspot: 0.053
             peak_voltage: 0
             pi_pulse_amplitude: 0
             T1: 8752.985976351081
@@ -67,7 +67,7 @@ characterization:
         D2:
             bare_resonator_frequency: 7101560000
             readout_frequency: 7109300000
-            drive_frequency: 5755342656
+            drive_frequency: 5755324952
             anharmonicity: 0
             Ec: 0
             Ej: 0
@@ -94,13 +94,13 @@ characterization:
         D3:
             bare_resonator_frequency: 7336853000
             readout_frequency: 7342900000
-            drive_frequency: 6074329753
+            drive_frequency: 6074358010
             anharmonicity: 286200000
             Ec: 0
             Ej: 0
             g: 0
             assigment_fidelity: 0.0
-            sweetspot: -0.137
+            sweetspot: -0.127
             peak_voltage: 0
             pi_pulse_amplitude: 0
             T1: 6610.395234920448
