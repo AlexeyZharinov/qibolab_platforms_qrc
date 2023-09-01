@@ -7,17 +7,17 @@ topology:
 native_gates:
     single_qubit:
         D1:
-            RX: {duration: 40, amplitude: 0.535, frequency: 4940357493, shape: Gaussian(2),
+            RX: {duration: 40, amplitude: 0.24, frequency: 4_912_748_720, shape: Gaussian(5),
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.16, frequency: 6952316555, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.16, frequency: 6_952_398_668, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         D2:
-            RX: {duration: 40, amplitude: 0.551, frequency: 5_755_933_959, shape: Gaussian(2),
+            RX: {duration: 40, amplitude: 0.5, frequency: 5_755_058_359, shape: Gaussian(5),
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.13, frequency: 7110360000, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.13, frequency: 7_110_360_000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         D3:
-            RX: {duration: 40, amplitude: 0.696, frequency: 6_075_205_000, shape: Gaussian(2),
+            RX: {duration: 40, amplitude: 0.2, frequency: 6_072_345_900, shape: Gaussian(5),
                 type: qd, start: 0, phase: 0}
             #MZ: {duration: 4000, amplitude: 0.1, frequency: 7_344_123_000, shape: Rectangular(),
             MZ: {duration: 4000, amplitude: 0.102, frequency: 7_344_253_000, shape: Rectangular(),
@@ -39,14 +39,14 @@ characterization:
     single_qubit:
         D1:
             bare_resonator_frequency: 6949916555
-            readout_frequency: 6951700000
-            drive_frequency: 4934770660
+            readout_frequency: 6_952_398_668
+            drive_frequency: 4_912_748_720  #4934770660
             anharmonicity: 0.0
             Ec: 0
             Ej: 0
             g: 0
             assigment_fidelity: 0.0
-            sweetspot: 0.053
+            sweetspot: 0.03 #0.053
             peak_voltage: 0
             pi_pulse_amplitude: 0
             T1: 8752.985976351081
@@ -66,14 +66,14 @@ characterization:
             classifiers_hpars: {}
         D2:
             bare_resonator_frequency: 7101560000
-            readout_frequency: 7109300000
-            drive_frequency: 5755324952
+            readout_frequency: 7_110_360_000
+            drive_frequency: 5_755_058_359
             anharmonicity: 0
             Ec: 0
             Ej: 0
             g: 0
             assigment_fidelity: 0.0
-            sweetspot: 0.069
+            sweetspot: 0.071
             peak_voltage: 0
             pi_pulse_amplitude: 0
             T1: 9648.473025473866
@@ -93,14 +93,14 @@ characterization:
             classifiers_hpars: {}
         D3:
             bare_resonator_frequency: 7336853000
-            readout_frequency: 7342900000
-            drive_frequency: 6074358010
+            readout_frequency: 7_344_253_000
+            drive_frequency: 6_072_345_900
             anharmonicity: 286200000
             Ec: 0
             Ej: 0
             g: 0
             assigment_fidelity: 0.0
-            sweetspot: -0.127
+            sweetspot: -0.131
             peak_voltage: 0
             pi_pulse_amplitude: 0
             T1: 6610.395234920448
