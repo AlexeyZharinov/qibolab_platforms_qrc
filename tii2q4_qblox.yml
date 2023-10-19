@@ -1,19 +1,19 @@
 nqubits: 1
 qubits: [0]
 topology: []
-settings: {nshots: 1024, relaxation_time: 70000, sampling_rate: 9830400000}
+settings: {nshots: 1024, relaxation_time: 1000, sampling_rate: 9830400000}
 
 instruments:
     twpa_pump:
         frequency: 6_554_000_000
-        power: -5.6
+        power: -1
 
 native_gates:
     single_qubit:
         0:
             RX: {duration: 40, amplitude: 0.4991361195928207, frequency: 5509378347,
                 shape: Gaussian(3), type: qd, start: 0, phase: 0}
-            MZ: {duration: 2000, amplitude: 0.1, frequency: 7355000000, shape: Rectangular(),
+            MZ: {duration: 2000, amplitude: 0.1, frequency: 7375000000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
     two_qubits: {}
 characterization:
