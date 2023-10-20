@@ -55,21 +55,21 @@ instruments_settings = {
         }
     ),
 
-    # "qrm_rf_b": ClusterQCM_RF_Settings(  # q2,q3,q4
-    #     {
-    #         "o1": ClusterRF_OutputPort_Settings(
-    #             channel="L3-07",
-    #             attenuation=32,
-    #             lo_frequency=7_850_000_000,
-    #             gain=0.6,
-    #         ),
-    #         "i1": QbloxInputPort_Settings(
-    #             channel="L2-04",
-    #             acquisition_hold_off=TIME_OF_FLIGHT,
-    #             acquisition_duration=900,
-    #         ),
-    #     } 
-    # ),
+    "qrm_rf_b": ClusterQCM_RF_Settings(  # q2,q3,q4
+        {
+            "o1": ClusterRF_OutputPort_Settings(
+                channel="L3-03",
+                attenuation=0,
+                lo_frequency=5_500_000_000,
+                gain=1,
+            ),
+            "i1": QbloxInputPort_Settings(
+                channel="L99",
+                acquisition_hold_off=TIME_OF_FLIGHT,
+                acquisition_duration=900,
+            ),
+        } 
+    ),
 }
 
 
@@ -93,12 +93,12 @@ def create(runcard_path=RUNCARD):
         settings=instruments_settings["cluster"],
     )
 
-    qrm_rf_a = insSo,tantiate_module(
+    qrm_rf_a = instantiate_module(
         modules, ClusterQRM_RF, "qrm_rf_a", "192.168.0.2:12", instruments_settings
     )  # qubits q0
-    # qrm_rf_b = instantiate_module(
-    #     modules, ClusterQCM_RF, "qrm_rf_b", "192.168.0.2:14", instruments_settings
-    # )  # qubits q0
+    qrm_rf_b = instantiate_module(
+        modules, ClusterQCM_RF, "qrm_rf_b", "192.168.0.2:14", instruments_settings
+    )  # qubits q0
 
     # DEBUG: debug folder = report folder
     # import os
@@ -120,7 +120,7 @@ def create(runcard_path=RUNCARD):
     channels["L2-04"] = Channel(name="L2-04", port=qrm_rf_a.ports["i1"])
 
     # drive
-    #channels["L3-07"] = Channel(name="L3-07", port=qrm_rf_b.ports["o1"])
+    channels["L3-03"] = Channel(name="L3-03", port=qrm_rf_b.ports["o1"])
 
     # flux (no flux tunable the tii1q_b4)
 
@@ -138,7 +138,7 @@ def create(runcard_path=RUNCARD):
     qubits[0].readout = channels["L3-30"]
     qubits[0].feedback = channels["L2-04"]
     qubits[0].twpa = channels["L3-29"]
-    #qubits[0].drive = channels["L3-07"]
+    qubits[0].drive = channels["L3-03"]
 
     instruments = {controller.name: controller, twpa_pump.name: twpa_pump}
     settings = load_settings(runcard)
