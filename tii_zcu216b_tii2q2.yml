@@ -10,7 +10,7 @@ native_gates:
             RX: {duration: 100, amplitude: 0.33, frequency: 4_939_948_720, shape: Gaussian(5),        
             #RX: {duration: 100, amplitude: 0.33, frequency: 4_912_948_720, shape: Gaussian(5), 
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.1, frequency: 7_315_800_000, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.1, frequency: 7_326_700_000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         Q2:
             RX: {duration: 100, amplitude: 0.39, frequency: 5_775_051_359, shape: Gaussian(5),
@@ -29,8 +29,8 @@ native_gates:
 characterization:
     single_qubit:
         Q1:
-            bare_resonator_frequency: 6949916555
-            readout_frequency: 6_952_398_668
+            bare_resonator_frequency: 7_326_700_000
+            readout_frequency: 7_326_398_668
             drive_frequency: 4_912_748_720  #4934770660
             anharmonicity: 0.0
             Ec: 0
@@ -56,7 +56,7 @@ characterization:
             mixer_readout_phi: 0.0
             classifiers_hpars: {}
         Q2:
-            bare_resonator_frequency: 7101560000
+            bare_resonator_frequency: 7_326_700_000
             readout_frequency: 7_110_360_000
             drive_frequency: 5_755_058_359
             anharmonicity: 0
