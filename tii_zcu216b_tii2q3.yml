@@ -10,12 +10,12 @@ native_gates:
             RX: {duration: 100, amplitude: 0.33, frequency: 4_939_948_720, shape: Gaussian(5),        
             #RX: {duration: 100, amplitude: 0.33, frequency: 4_912_948_720, shape: Gaussian(5), 
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.005, frequency: 7_356_800_000, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.02, frequency: 7_356_800_000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
         Q2:
             RX: {duration: 100, amplitude: 0.39, frequency: 5_775_051_359, shape: Gaussian(5),
                 type: qd, start: 0, phase: 0}
-            MZ: {duration: 4000, amplitude: 0.005, frequency: 7_356_800_000, shape: Rectangular(),
+            MZ: {duration: 4000, amplitude: 0.02, frequency: 7_356_800_000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
 
     two_qubit:

@@ -33,23 +33,23 @@ def create(runcard_path=RUNCARD):
     # qubit Q1
     channels |= Channel("L2-03-1", port=controller[0])  # feedback
     channels |= Channel("L1-06", port=controller[1])  # flux
-    channels |= Channel("L3-07", port=controller[0])  # drive
+    channels |= Channel("L3-05", port=controller[0])  # drive
 
     # qubit Q2
     channels |= Channel("L2-03-2", port=controller[1])  # feedback
     channels |= Channel("L1-06", port=controller[3])  # flux
-    channels |= Channel("L3-08", port=controller[4])  # drive
+    channels |= Channel("L3-06", port=controller[4])  # drive
 
 
 
     twpa_lo = SGS100A("TWPA", TWPA_ADDRESS)
-    twpa_lo.frequency = 5_300_250_000
+    twpa_lo.frequency = 7_000_000_000
     twpa_lo.power = -5
 
     readout_lo = SGS100A("LO", LO_ADDRESS)
     readout_lo.frequency = 7.5e9
     readout_lo.power = 10
-    channels["L3-30"].local_oscillator = readout_lo
+    channels["L3-27"].local_oscillator = readout_lo
 
     local_oscillators = [readout_lo, twpa_lo]
     instruments = [controller] + local_oscillators
@@ -59,15 +59,15 @@ def create(runcard_path=RUNCARD):
     qubits, pairs = load_qubits(runcard)
 
     # assign channels to qubits
-    qubits["Q1"].readout = channels["L3-30"]
-    qubits["Q1"].feedback = channels["L2-04-1"]
-    qubits["Q1"].drive = channels["L3-07"]
-    qubits["Q1"].flux = channels["L1-07"]
+    qubits["Q1"].readout = channels["L3-27"]
+    qubits["Q1"].feedback = channels["L2-03-1"]
+    qubits["Q1"].drive = channels["L3-05"]
+    qubits["Q1"].flux = channels["L1-06"]
 
-    qubits["Q2"].readout = channels["L3-30"]
-    qubits["Q2"].feedback = channels["L2-04-2"]
-    qubits["Q2"].drive = channels["L3-08"]
-    qubits["Q2"].flux = channels["L1-07"]
+    qubits["Q2"].readout = channels["L3-27"]
+    qubits["Q2"].feedback = channels["L2-03-2"]
+    qubits["Q2"].drive = channels["L3-06"]
+    qubits["Q2"].flux = channels["L1-06"]
 
 
     instruments = {
