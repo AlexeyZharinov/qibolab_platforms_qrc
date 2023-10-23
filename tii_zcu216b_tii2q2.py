@@ -10,7 +10,7 @@ from qibolab.serialize import load_qubits, load_runcard, load_settings
 NAME = "tii_zcu216b_tii2q3"
 ADDRESS = "192.168.0.93"
 PORT = 6000
-RUNCARD = pathlib.Path(__file__).parent / "tii_zcu216b_tii2q4.yml"
+RUNCARD = pathlib.Path(__file__).parent / "tii_zcu216b_tii2q2.yml"
 
 TWPA_ADDRESS = "192.168.0.34"
 LO_ADDRESS = "192.168.0.33"
