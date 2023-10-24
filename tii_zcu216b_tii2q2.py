@@ -42,16 +42,16 @@ def create(runcard_path=RUNCARD):
 
 
 
-    twpa_lo = SGS100A("TWPA", TWPA_ADDRESS)
-    twpa_lo.frequency = 7_000_000_000
-    twpa_lo.power = -5
+    # twpa_lo = SGS100A("TWPA", TWPA_ADDRESS)
+    # twpa_lo.frequency = 7_000_000_000
+    # twpa_lo.power = -5
 
     readout_lo = SGS100A("LO", LO_ADDRESS)
     readout_lo.frequency = 7.5e9
     readout_lo.power = 10
     channels["L3-26"].local_oscillator = readout_lo
 
-    local_oscillators = [readout_lo, twpa_lo]
+    local_oscillators = [readout_lo] #, twpa_lo]
     instruments = [controller] + local_oscillators
 
     # create qubit objects
@@ -73,7 +73,7 @@ def create(runcard_path=RUNCARD):
     instruments = {
         controller.name: controller,
         readout_lo.name: readout_lo,
-        twpa_lo.name: twpa_lo,
+#        twpa_lo.name: twpa_lo,
     }
     settings = load_settings(runcard)
     return Platform(NAME, qubits, pairs, instruments, settings, resonator_type="2D")
