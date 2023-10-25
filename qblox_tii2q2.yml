@@ -14,13 +14,13 @@ native_gates:
             RX: {duration: 40, amplitude: 0.49, 
                 shape: Gaussian(5), frequency: 5_509_378_347,
                 type: qd, relative_start: 0, phase: 0}
-            MZ: {duration: 2000, amplitude: 0.0005, frequency: 7_326_700_000, shape: Rectangular(),
+            MZ: {duration: 2000, amplitude: 0.1, frequency: 7_327_500_000, shape: Rectangular(),
                 type: ro, start: 0, phase: 0}
 #    two_qubits: {}
 characterization:
     single_qubit:
         0:
-            readout_frequency: 7_255_000_000
+            readout_frequency: 7_327_500_000
             drive_frequency: 5050304836
             anharmonicity: 0
             Ec: 0
