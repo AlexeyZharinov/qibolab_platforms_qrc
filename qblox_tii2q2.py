@@ -65,7 +65,22 @@ instruments_settings = {
             "o1": ClusterRF_OutputPort_Settings(
                 channel="L3-03",
                 attenuation=0,
-                lo_frequency=4_200_000_000,
+                lo_frequency=4_400_000_000,
+                gain=1,
+            ),
+            "i1": QbloxInputPort_Settings(
+                channel="L98",
+                acquisition_hold_off=TIME_OF_FLIGHT,
+                acquisition_duration=900,
+            ),
+        } 
+    ),
+        "qrm_rf_c": ClusterQRM_RF_Settings(  # q2,q3,q4
+        {
+            "o1": ClusterRF_OutputPort_Settings(
+                channel="L3-04",
+                attenuation=0,
+                lo_frequency=4_400_000_000,
                 gain=1,
             ),
             "i1": QbloxInputPort_Settings(
@@ -81,7 +96,7 @@ instruments_settings = {
             "o3": ClusterBB_OutputPort_Settings(
                 channel="L1-5",
                 gain=0.5,
-                qubit=0,  # channel="L4-3", gain=0.5, offset=-0.8893, qubit=3
+                qubit="Q1",  # channel="L4-3", gain=0.5, offset=-0.8893, qubit=3
             ),
 
         }
@@ -115,6 +130,9 @@ def create(runcard_path=RUNCARD):
     qrm_rf_b = instantiate_module(
        modules, ClusterQRM_RF, "qrm_rf_b", "192.168.0.2:14", instruments_settings
     )  # qubits q0
+    qrm_rf_c = instantiate_module(
+       modules, ClusterQRM_RF, "qrm_rf_c", "192.168.0.2:15", instruments_settings
+    )    
     qcm_bb0 = instantiate_module(
         modules, ClusterQCM_BB, "qcm_bb0", "192.168.0.2:5", instruments_settings
     )  # qubits q0
@@ -139,6 +157,7 @@ def create(runcard_path=RUNCARD):
 
     # drive
     channels["L3-03"] = Channel(name="L3-03", port=qrm_rf_b.ports["o1"])
+    channels["L3-04"] = Channel(name="L3-04", port=qrm_rf_c.ports["o1"])
 
     # flux ()
     channels["L1-05"] = Channel(name="L1-05", port=qcm_bb0.ports["o3"])
@@ -153,10 +172,16 @@ def create(runcard_path=RUNCARD):
     # del qubits[5]
     # assign channels to qubits
 
-    qubits[0].readout = channels["L3-26"]
-    qubits[0].feedback = channels["L2-02"]
-    qubits[0].flux = channels["L1-05"]
-    qubits[0].drive = channels["L3-03"]
+    qubits["Q1"].readout = channels["L3-26"]
+    qubits["Q1"].feedback = channels["L2-02"]
+    qubits["Q1"].flux = channels["L1-05"]
+    qubits["Q1"].drive = channels["L3-03"]
+
+
+    qubits["Q2"].readout = channels["L3-26"]
+    qubits["Q2"].feedback = channels["L2-02"]
+    #qubits["Q2"].flux = channels["L1-05"]
+    qubits["Q2"].drive = channels["L3-04"]
 
     instruments = {controller.name: controller} #, twpa_pump.name: twpa_pump} 
     settings = load_settings(runcard)
