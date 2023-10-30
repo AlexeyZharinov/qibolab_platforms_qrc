@@ -48,7 +48,7 @@ instruments_settings = {
         {
             "o1": ClusterRF_OutputPort_Settings(
                 channel="L3-27",
-                attenuation=30,  # 38
+                attenuation=40,  # 38
                 lo_frequency=7_500_000_000,
                 gain=1,
             ),
@@ -64,8 +64,8 @@ instruments_settings = {
         {
             "o1": ClusterRF_OutputPort_Settings(
                 channel="L3-05",
-                attenuation=0,
-                lo_frequency=4_400_000_000,
+                attenuation=32,
+                lo_frequency=5_400_000_000,
                 gain=1,
             ),
             "i1": QbloxInputPort_Settings(
@@ -79,8 +79,8 @@ instruments_settings = {
         {
             "o1": ClusterRF_OutputPort_Settings(
                 channel="L3-06",
-                attenuation=0,
-                lo_frequency=4_400_000_000,
+                attenuation=20,
+                lo_frequency=4_300_000_000,
                 gain=1,
             ),
             "i1": QbloxInputPort_Settings(
@@ -172,18 +172,18 @@ def create(runcard_path=RUNCARD):
     # del qubits[5]
     # assign channels to qubits
 
-    qubits["Q1"].readout = channels["L3-26"]
-    qubits["Q1"].feedback = channels["L2-02"]
-    qubits["Q1"].flux = channels["L1-05"]
-    qubits["Q1"].drive = channels["L3-03"]
+    qubits["Q1"].readout = channels["L3-27"]
+    qubits["Q1"].feedback = channels["L2-03"]
+    qubits["Q1"].flux = channels["L1-06"]
+    qubits["Q1"].drive = channels["L3-05"]
 
 
-    qubits["Q2"].readout = channels["L3-26"]
-    qubits["Q2"].feedback = channels["L2-02"]
+    qubits["Q2"].readout = channels["L3-27"]
+    qubits["Q2"].feedback = channels["L2-03"]
     #qubits["Q2"].flux = channels["L1-05"]
-    qubits["Q2"].drive = channels["L3-04"]
+    qubits["Q2"].drive = channels["L3-06"]
 
-    instruments = {controller.name: controller} #, twpa_pump.name: twpa_pump} 
+    instruments = {controller.name: controller , twpa_pump.name: twpa_pump} 
     settings = load_settings(runcard)
     instruments = load_instrument_settings(runcard, instruments)
     return Platform(
