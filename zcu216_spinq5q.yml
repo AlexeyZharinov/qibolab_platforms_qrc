@@ -1,11 +1,16 @@
 nqubits: 5
-settings: {nshots: 1024, sampling_rate: 1000000000, relaxation_time: 20000}
+
 qubits: [1, 2, 3, 4, 5]
 topology:
 - [1, 2]
 - [2, 3]
 - [3, 4]
 - [4, 5]
+
+settings: 
+    sampling_rate: 6144000000
+    relaxation_time: 100_000 
+    nshots: 1000
 
 instruments:
     readout_lo:
@@ -19,37 +24,37 @@ native_gates:
     single_qubit:
         1:
             RX: {duration: 40, amplitude: 0.294, shape: Gaussian(5),
-                frequency: 4228472634, relative_start: 0, phase: 0, type: qd}
+                frequency: 4228472634, start: 0, phase: 0, type: qd}
             # MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7433510045,
             #     relative_start: 0, phase: 0, type: ro}
             # MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7433310045,
             #     relative_start: 0, phase: 0, type: ro}
             MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7433670045,
-                relative_start: 0, phase: 0, type: ro}
+                start: 0, phase: 0, type: ro}
         2:
             RX: {duration: 40, amplitude: 0.473, shape: Gaussian(5),
-                frequency: 4852154170, relative_start: 0, phase: 0, type: qd}
+                frequency: 4852154170, start: 0, phase: 0, type: qd}
             # MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7511633427,
             #     relative_start: 0, phase: 0, type: ro}
             # MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7511384427,
             #     relative_start: 0, phase: 0, type: ro}
             MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7511744427,
-                relative_start: 0, phase: 0, type: ro}
+                start: 0, phase: 0, type: ro}
         3:
             RX: {duration: 40, amplitude: 0.2, shape: Gaussian(5), frequency: 4277000000,
-                relative_start: 0, phase: 0, type: qd}
+                start: 0, phase: 0, type: qd}
             MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7549119105,
-                relative_start: 0, phase: 0, type: ro}
+                start: 0, phase: 0, type: ro}
         4:
             RX: {duration: 40, amplitude: 0.2, shape: Gaussian(5), frequency: 4848000000,
-                relative_start: 0, phase: 0, type: qd}
+                start: 0, phase: 0, type: qd}
             MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7584409835,
-                relative_start: 0, phase: 0, type: ro}
+                start: 0, phase: 0, type: ro}
         5:
             RX: {duration: 40, amplitude: 0.2, shape: Gaussian(5), frequency: 4047000000,
-                relative_start: 0, phase: 0, type: qd}
+                start: 0, phase: 0, type: qd}
             MZ: {duration: 2500, amplitude: 0.1, shape: Rectangular(), frequency: 7611334128,
-                relative_start: 0, phase: 0, type: ro}
+                start: 0, phase: 0, type: ro}
 
     two_qubit:
         1-2:
