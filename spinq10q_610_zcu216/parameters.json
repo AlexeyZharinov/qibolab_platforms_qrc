@@ -31,8 +31,8 @@
     ],
     "instruments": {
       "twpa_pump": {
-        "power": -2.24,
-        "frequency": 6803000000
+        "power": 2.3,
+        "frequency": 6380000000
       }
     },
     "native_gates": {
@@ -69,7 +69,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.1,
+            "amplitude": 0.9,
             "shape": "Rectangular()",
             "frequency": 7552744427,
             "relative_start": 0,
@@ -89,7 +89,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.1,
+            "amplitude": 0.9,
             "shape": "Rectangular()",
             "frequency": 7582119105,
             "relative_start": 0,
@@ -100,7 +100,7 @@
         "9": {
           "RX": {
             "duration": 40,
-            "amplitude": 0.2,
+            "amplitude": 0.9,
             "shape": "Gaussian(5)",
             "frequency": 7549119105,
             "relative_start": 0,
@@ -109,7 +109,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.1,
+            "amplitude": 0.9,
             "shape": "Rectangular()",
             "frequency": 7442409835,
             "relative_start": 0,
@@ -129,7 +129,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.1,
+            "amplitude": 0.9,
             "shape": "Rectangular()",
             "frequency": 7625334128,
             "relative_start": 0,
@@ -137,7 +137,57 @@
             "type": "ro"
           }
         }
-      }
+      },
+      "two_qubit": {
+        "6-7": {
+          "CZ": [
+            {
+              "duration": 37,
+              "amplitude": 0.0462,
+              "shape": "Rectangular()",
+              "qubit": 6,
+              "relative_start": 0,
+              "type": "qf"
+            }
+          ]
+        },
+        "7-8": {
+          "CZ": [
+            {
+              "duration": 40,
+              "amplitude": 0.1,
+              "shape": "Rectangular()",
+              "qubit": 7,
+              "relative_start": 0,
+              "type": "qf"
+            }
+          ]
+        },
+        "8-9": {
+          "CZ": [
+            {
+              "duration": 40,
+              "amplitude": 0.1,
+              "shape": "Rectangular()",
+              "qubit": 8,
+              "relative_start": 0,
+              "type": "qf"
+            }
+          ]
+        },
+        "9-10": {
+          "CZ": [
+            {
+              "duration": 40,
+              "amplitude": 0.1,
+              "shape": "Rectangular()",
+              "qubit": 9,
+              "relative_start": 0,
+              "type": "qf"
+            }
+          ]
+        }
+      } 
     },
     "characterization": {
       "single_qubit": {
