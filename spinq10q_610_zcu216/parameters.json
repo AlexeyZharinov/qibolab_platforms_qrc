@@ -192,7 +192,7 @@
     "characterization": {
       "single_qubit": {
         "6": {
-          "bare_resonator_frequency": 7492188457,
+          "bare_resonator_frequency": 7491302171,
           "readout_frequency": 7433670045,
           "drive_frequency": 4228472634,
           "anharmonicity": 197369466,
@@ -226,7 +226,7 @@
           "mixer_readout_phi": 0
         },
         "7": {
-          "bare_resonator_frequency": 7552048480,
+          "bare_resonator_frequency": 7551093742,
           "readout_frequency": 7511744427,
           "drive_frequency": 4852154170,
           "anharmonicity": 196746898,
@@ -260,7 +260,7 @@
           "mixer_readout_phi": 0
         },
         "8": {
-          "bare_resonator_frequency": 7547000000,
+          "bare_resonator_frequency": 7578697873,
           "readout_frequency": 7549119105,
           "drive_frequency": 4277000000,
           "anharmonicity": 300000000,
@@ -294,7 +294,7 @@
           "mixer_readout_phi": 0
         },
         "9": {
-          "bare_resonator_frequency": 7584088255,
+          "bare_resonator_frequency": 7438764965,
           "readout_frequency": 7584409835,
           "drive_frequency": 4848000000,
           "anharmonicity": 300000000,
