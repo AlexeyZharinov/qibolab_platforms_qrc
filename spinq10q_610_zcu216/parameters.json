@@ -49,7 +49,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.9,
+            "amplitude": 0.1,
             "shape": "Rectangular()",
             "frequency": 7492670045,
             "relative_start": 0,
@@ -69,7 +69,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.9,
+            "amplitude": 0.1,
             "shape": "Rectangular()",
             "frequency": 7552744427,
             "relative_start": 0,
@@ -89,7 +89,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.9,
+            "amplitude": 0.1,
             "shape": "Rectangular()",
             "frequency": 7582119105,
             "relative_start": 0,
@@ -109,7 +109,7 @@
           },
           "MZ": {
             "duration": 2500,
-            "amplitude": 0.9,
+            "amplitude": 0.1,
             "shape": "Rectangular()",
             "frequency": 7442409835,
             "relative_start": 0,
