@@ -89,7 +89,7 @@ def create():
     controller = Zurich(
         "EL_ZURO",
         device_setup=device_setup,
-        use_emulation=False,
+        # use_emulation=False,
         time_of_flight=75,
         smearing=50,
     )
@@ -148,15 +148,15 @@ def create():
 
     # HDAWGS
     # Sets the output voltage range.
-    # The instrument selects the next higher available Range with a resolution of 0.4 Volts.
+    # The instrument selects the next higher available Range with a resolution of 0.4 Volts [200mV, 400mV, 600mV, 800mV, 1V, 2V, 3V, 4V, 5V]
 
     # flux
     for i in range(6, 11):
-        channels[f"L4-{i}"].power_range = 9
+        channels[f"L4-{i}"].power_range = 5
 
     # flux couplers
     for i in range(11, 15):
-        channels[f"L4-{i}"].power_range = 9
+        channels[f"L4-{i}"].power_range = 5
 
     # Instantiate local oscillators
     local_oscillators = [
