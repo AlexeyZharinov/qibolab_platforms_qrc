@@ -111,7 +111,7 @@
                 "RX": {
                     "duration": 40,
                     "amplitude": 0.3304,
-                    "shape": "Gaussian(5)",
+                    "shape": "Drag(5, 0.8)",
                     "frequency": 4768978556,
                     "relative_start": 0,
                     "phase": 0,
@@ -169,7 +169,7 @@
                 "RX": {
                     "duration": 40,
                     "amplitude": 0.4255,
-                    "shape": "Gaussian(5)",
+                    "shape": "Drag(5, -0.4)",
                     "frequency": 5516506000,
                     "relative_start": 0,
                     "phase": 0.0,
@@ -198,7 +198,7 @@
                 "RX": {
                     "duration": 40,
                     "amplitude": 0.4514,
-                    "shape": "Gaussian(5)",
+                    "shape": "Drag(5, -0.4)",
                     "frequency": 6324582000,
                     "relative_start": 0,
                     "phase": 0.0,
