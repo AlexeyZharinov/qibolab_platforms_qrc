@@ -1,0 +1,82 @@
+nqubits: 1
+settings:
+  nshots: 1024
+  relaxation_time: 2000
+qubits: [1]
+topology: []
+instruments:
+  qrm_rf0:
+    o1:
+      attenuation: 5
+      lo_frequency: 7487380000
+    i1:
+      acquisition_hold_off: 500
+      acquisition_duration: 1800
+  qcm_rf0:
+    o1:
+      attenuation: 80
+      lo_frequency: 5108000000
+#    o2:
+#      attenuation: 0
+#      lo_frequency: 5205000000
+  # qcm_bb0:
+  #    o1:
+  #        offset: 0.0 # q1
+  #    o2:
+  #        offset: 0.0 # q2
+  #    o3:
+  #        offset: 0.0 # 
+  #    o4:
+  #        offset: 0.0 # 
+
+native_gates:
+    single_qubit:
+        1:
+            RX: {duration: 40, amplitude: 0.095, shape: Gaussian(2), frequency: 4900000000, #4875500000, #4878726197
+                relative_start: 0, phase: 0, type: qd}
+            RX12: {duration: 200, amplitude: 0.043, shape: Gaussian(2), frequency: 4037838000,
+                relative_start: 0, phase: 0, type: qd}
+
+          
+            MZ: {duration: 2500, amplitude: 0.095, shape: Rectangular(), frequency:  7290650000,    # state |0>
+                relative_start: 0, phase: 0, type: ro}
+
+    two_qubits: {} 
+   #     1-2:
+   #         CZ:
+   #         - {duration: 40, amplitude: 0.01, shape: Rectangular(), qubit: 2, relative_start: 0,
+   #             type: qf}
+   #         # - {duration: 37, amplitude: 0.1433, shape: Rectangular(), qubit: 2, relative_start: 0,
+   #         #     type: qf}
+characterization:
+  single_qubit:
+    1:
+      bare_resonator_frequency: 7296400000
+      readout_frequency: 7301050000
+      drive_frequency: 5678000000
+      anharmonicity: 0
+      sweetspot: 0.0
+      asymmetry: 0
+      #crosstalk_matrix: {}
+      Ec: 0
+      Ej: 0
+      g: 0
+      assignment_fidelity: 0
+      readout_fidelity: 0
+      effective_temperature: 0
+      peak_voltage: 0
+      pi_pulse_amplitude: 0
+      T1: 8752.985976351081
+      T2: 0
+      T2_spin_echo: 0
+      state0_voltage: 0
+      state1_voltage: 0
+      mean_gnd_states: [2.7928963953488375, 0.38721744186046514]
+      mean_exc_states: [3.1822208720930236, 2.6839408139534884]
+      threshold: 2.0384892421724587
+      iq_angle: -1.4028795254342719
+      mixer_drive_g: 0
+      mixer_drive_phi: 0
+      mixer_readout_g: 0
+      mixer_readout_phi: 0
+    
