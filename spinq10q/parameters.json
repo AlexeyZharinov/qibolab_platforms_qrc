@@ -9,7 +9,12 @@
     1,
     2,
     3,
-    4
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
   ],
   "topology": [
     [
@@ -27,12 +32,26 @@
     [
       3,
       4
-    ]
+    ],
+    [5,6],
+    [6,7],
+    [7,8],
+    [8,9],
+    [0,5],
+    [1,6],
+    [2,7],
+    [3,8],
+    [4,9]
   ],
+
   "instruments": {
     "twpa_pump0": {
-      "power": -2.24,
+      "power": -1.7,
       "frequency": 6803000000
+    },
+    "twpa_pump1": {
+      "power": 2.3,
+      "frequency": 6380000000
     },
     "qrm_rf0": {
       "o1": {
@@ -41,7 +60,17 @@
       },
       "i1": {
         "acquisition_hold_off": 500,
-        "acquisition_duration": 1800
+        "acquisition_duration": 2500
+      }
+    },
+    "qrm_rf1": {
+      "o1": {
+        "attenuation": 42,
+        "lo_frequency":  7640000000
+      },
+      "i1": {
+        "acquisition_hold_off": 500,
+        "acquisition_duration": 2500
       }
     },
     "qcm_rf0": {
@@ -50,24 +79,48 @@
         "lo_frequency": 4478384733
       },
       "o2": {
-        "attenuation": 0,
-        "lo_frequency": 4953973449
+        "attenuation": 20,
+        "lo_frequency": 5041973449
       }
     },
     "qcm_rf1": {
       "o1": {
-        "attenuation": 0,
-        "lo_frequency": 4527000000
+        "attenuation": 20,
+        "lo_frequency": 4466000000
       },
       "o2": {
-        "attenuation": 0,
-        "lo_frequency": 5098000000
+        "attenuation": 20,
+        "lo_frequency": 5041000000
       }
     },
     "qcm_rf2": {
       "o1": {
-        "attenuation": 0,
-        "lo_frequency": 4297000000
+        "attenuation": 20,
+        "lo_frequency": 4307000000
+      },
+      "o2": {
+        "attenuation": 20,
+        "lo_frequency": 4994000000
+      }
+    },
+    "qcm_rf3": {
+      "o1": {
+        "attenuation": 20,
+        "lo_frequency": 4327000000
+      },
+      "o2": {
+        "attenuation": 20,
+        "lo_frequency": 4931000000
+      }
+    },
+    "qcm_rf4": {
+      "o1": {
+        "attenuation": 20,
+        "lo_frequency": 4029000000
+      },
+      "o2": {
+        "attenuation": 20,
+        "lo_frequency": 4564000000
       }
     }
   },
